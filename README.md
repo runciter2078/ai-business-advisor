@@ -4,7 +4,6 @@
 > Pipeline ML con Prophet y LightGBM, drift monitoring con Evidently y capa de
 > interpretación agentic con LangGraph.
 
-[![CI](https://github.com/tu-usuario/ai-business-advisor/actions/workflows/deploy.yml/badge.svg)](https://github.com/tu-usuario/ai-business-advisor/actions)
 [![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green.svg)](https://fastapi.tiangolo.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -148,4 +147,4 @@ Principales decisiones arquitectónicas y su justificación:
 ## Autor
 
 **Pablo Beret** · Data Scientist / AI Engineer  
-[LinkedIn](https://linkedin.com/in/tu-perfil) · [GitHub](https://github.com/tu-usuario)
+[pabloberet.com](https://pabloberet.com) · [LinkedIn](https://www.linkedin.com/in/pabloberet/) · [GitHub](https://github.com/runciter2078)
