@@ -1,0 +1,38 @@
+# =============================================================================
+# AI Business Advisor — docker-compose.yml
+# Desarrollo local: FastAPI + SQLite con volúmenes persistentes
+# =============================================================================
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-business-advisor-api
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=development
+      - DATABASE_URL=sqlite+aiosqlite:///./data/ai_advisor.db
+      - DRIFT_REPORTS_DIR=./data/drift_reports
+    env_file:
+      - .env
+    volumes:
+      # Persistencia de la base de datos y artefactos entre reinicios
+      - ./data:/app/data
+      # Hot-reload del código en desarrollo (comentar en producción)
+      - ./app:/app/app
+    command: >
+      uvicorn app.main:app
+        --host 0.0.0.0
+        --port 8000
+        --reload
+        --log-level info
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    restart: unless-stopped

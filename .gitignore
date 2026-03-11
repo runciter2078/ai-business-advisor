@@ -1,0 +1,51 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Entorno virtual
+.venv/
+venv/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+coverage_html/
+htmlcov/
+
+# Linting
+.ruff_cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Variables de entorno — NUNCA subir al repo
+.env
+
+# Base de datos SQLite
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Artefactos Evidently
+data/drift_reports/*.html
+
+# Datos persistidos
+data/uploads/
+data/models/
+
+# Logs
+*.log
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
